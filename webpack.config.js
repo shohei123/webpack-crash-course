@@ -8,7 +8,15 @@ module.exports = {
         filename: "main.js",
         path: outputPath,
     },
+    module: {
+        rules: [
+            {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"],
+            },
+        ],
+    },
     devServer: {
-        contentBase: outputPath
-    }
+        contentBase: outputPath,
+    },
 };
